@@ -150,6 +150,33 @@ public class RadiatorView extends ListView {
 
 	private String getPrefix(String name) 
 	{
+        if (name.startsWith("CI_app-")) {
+            return "Apps";
+        }
+        if (name.startsWith("CI_cloud-")) {
+            return "Cloud";
+        }
+        if (name.startsWith("CI_js-")) {
+            return "JavaScript";
+        }
+        if (name.startsWith("CI_infralib-")) {
+            return "Infra Libs";
+        }
+        if (name.startsWith("CI_native-")) {
+            return "Native";
+        }
+        if (name.startsWith("CI_ide-")) {
+            return "IDE";
+        }
+        if (name.startsWith("CI_webservice-")) {
+            return "Web Services";
+        }
+        if (name.startsWith("CS_")) {
+            return "CI Stable";
+        }
+        if (name.startsWith("DY_")) {
+            return "Daily";
+        }
 		if (name.contains("_"))
 		{
 			return StringUtils.substringBefore(name, "_");
