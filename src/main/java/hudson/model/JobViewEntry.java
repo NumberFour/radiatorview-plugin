@@ -102,8 +102,9 @@ public class JobViewEntry implements IViewEntry {
 			if (!StringUtils.isEmpty(getClaim())
 					&& !getClaim().equals(NOT_CLAIMED + "."))
 				return "claimed";
-			else
-				return "failing";
+			else if (!getBroken())
+				return "unstable";
+			else return "failing";
 		else
 			return "successful";
 	}
@@ -283,12 +284,13 @@ public class JobViewEntry implements IViewEntry {
 	 * @see hudson.model.IViewEntry#getCulprit()
 	 */
 	public String getCulprit() {
-		Collection<String> culprits = getCulprits();
-		String culprit = " - ";
-		if (!culprits.isEmpty()) {
-			culprit = StringUtils.join(culprits, ", ");
-		}
-		return culprit;
+	    return "YOU - it's our code!";
+//		Collection<String> culprits = getCulprits();
+//		String culprit = " - ";
+//		if (!culprits.isEmpty()) {
+//			culprit = StringUtils.join(culprits, ", ");
+//		}
+//		return culprit;
 	}
 
 	/*

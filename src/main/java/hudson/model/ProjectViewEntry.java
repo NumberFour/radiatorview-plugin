@@ -152,12 +152,13 @@ public class ProjectViewEntry implements IViewEntry {
 	}
 
 	public String getCulprit() {
-		Collection<String> culprits = getCulprits();
-		String culprit = null;
-		if (!culprits.isEmpty()) {
-			culprit = StringUtils.join(culprits, ", ");
-		}
-		return culprit;
+	    return "YOU - it's our code!";
+//		Collection<String> culprits = getCulprits();
+//		String culprit = null;
+//		if (!culprits.isEmpty()) {
+//			culprit = StringUtils.join(culprits, ", ");
+//		}
+//		return culprit;
 	}
 
 	public String getDiff() {
