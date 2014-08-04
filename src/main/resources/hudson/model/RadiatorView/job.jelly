@@ -14,7 +14,7 @@
 		<!--  Job Name Title -->
 		<p>
 			<a style="color: ${job.color}; font-size: ${jobFont}; font-weight:bold;"
-				href="${job.lastBuildUrl}">${job.name}</a>
+				href="/${job.lastBuildUrl}">${job.name}</a>
 		</p>
 		<!--  Build health icon -->
 		<!--  
